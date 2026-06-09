@@ -37,4 +37,22 @@ I went through quite a few documents to figure this board out, since it was my f
 Wow that's a lot. But it is everything. You don't need to read it all, but perhaps have it on hand if you need it. With that out of the way, let the problems begin!
 
 # A Brief Explanation of how this Chip Works
-The STM32N6 chip is based on the ARM Cortex-M55 processor, with the Arm TrustZone and FPU (UM3249). This basically 
+"The STM32N6 chip is based on the ARM Cortex-M55 processor, with the Arm TrustZone and FPU ." (UM3249)
+
+This is basically the reason we have so many problems even getting started with this chip. A normal STM32 that you may have used before simply takes your program, puts it in flash, and happily executes it from it's start point (usually 0x0800 0000). In the case of the N6 however, every single program has to boot through a trusted bootchain.
+
+To that effect, the program consists of 3 parts:
+1. First Stage Bootloader (FSBL)
+2. Secure Application
+3. Non-Secure Application
+At poject creation time, you'll see all of these exist, based on how you pick your settings.
+
+The boot process is as follows:
+1. Boot ROM (internal to chip) copies the FSBL binary from external memory into internal SRAM.
+2. The chip then jumps to the FSBL program.
+3. FSBL then configures the binaries and sets timers and the like
+4. FSBL then copies in the main application into the main SRAM, or instructs the chip to read from external flash.
+
+The articles I've listed above go into more detail, but for the purposes of this article, it's sufficient to understand that the FSBL is the first piece of code that gets running after an N6 starts up.
+
+
