@@ -1,4 +1,4 @@
-# Introduction
+# Wahooooooo
 The STM32N6 chip has been pretty hyped up over the past year or so, for it's [Neural-Art](https://www.st.com/resource/en/product_presentation/st-neural-art-accelerator-introduction.pdf) accelerator (and thus ability to put neural networks on it). 
 
 I decided I wanted to try it out myself. While the standard demo is done with their [STM32N6 Discovery Kit](https://www.st.com/en/evaluation-tools/stm32n6570-dk.html), it was really expensive, especially for just fooling around. Luckily, the [NUCLEO-N6](https://www.st.com/en/evaluation-tools/nucleo-n657x0-q.html) provided a relatively low cost alternative.
