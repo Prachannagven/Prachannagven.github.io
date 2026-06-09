@@ -142,7 +142,7 @@ Post header 2.3 information :
 ```
 This is essentially a header that is added onto the FSBL image. It allows the internal bootloader to authenticate the overall image, and actually allows the program to be accepted by the chip.
 10. The default configuration of the jumpers (out of the box) must now be changed. Specifically, Boot1 must now be set to high. This sets the board in `Develpment Boot Mode`, allowing us to flash our firmware.
-![Config out of the box](./2026-06-10-getting-started-with-stm32n6/default_config.jpg)
+<img src="./2026-06-10-getting-started-with-stm32n6/default_config.jpg">
 ![Correct Config for Programming](./2026-06-10-getting-started-with-stm32n6/correct_configuration.jpg)
 11. Open up CubeProgrammer, and then select the extended loader button and pick the appropraite one.
 ![Extended Loader](./2026-06-10-getting-started-with-stm32n6/cubeprogrammer-selecting-el.png)
