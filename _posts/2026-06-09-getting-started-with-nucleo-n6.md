@@ -90,6 +90,7 @@ The articles I've listed above go into more detail, but for the purposes of this
 8. Type in the following command to sign the generated `.bin` file and prepare it for flashing.
 `<PATH_TO_STM32CUBEIDE>/STM32CubeProgrammer/bin/STM32_SigningTool_CLI -bin <NAME_OF_PROJECT>_FSBL.bin -nk -of 0x80000000 -t fsbl -o Project-trusted.bin -hv 2.3 -dump Project-trusted.bin -align`
 9. The above command generates a `Project-trusted.bin` which can finally be flashed to the system. You should see an output like below:
+
 ```
       -------------------------------------------------------------------
                        STM32 Signing Tool v2.22.0
