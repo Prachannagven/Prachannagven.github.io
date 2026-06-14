@@ -58,10 +58,10 @@ The articles I've listed above go into more detail, but for the purposes of this
 
 # The Actual Blinky
 1. Begin by opening up CubeMX and creating a new project using the Nucleo-N6 board. You'll be greeted by a screen that looks like below:
-![STM32CubeMX Screen for N6](./2026-06-10-getting-started-with-stm32n6/cube-mx-open.png)
+![STM32CubeMX Screen for N6](/assets/getting-started-with-nucleo-n6/cube-mx-open.png)
 2. Go to `System Core > GPIO` and make sure all the pins are Context Assigend to the FSBL.
-![](./2026-06-10-getting-started-with-stm32n6/incorrect-cubemx-gpio-config.png)
-![correct](./2026-06-10-getting-started-with-stm32n6/correct-cubemx-gpio-config.png)
+![](/assets/getting-started-with-nucleo-n6/incorrect-cubemx-gpio-config.png)
+![correct](/assets/getting-started-with-nucleo-n6/correct-cubemx-gpio-config.png)
 3. Once you've set that, go to the Project Manager tab, and make sure only FSBL is ticked in Project Structure
 4. Now open the project in your preferred editor. I'm going with STM32CubeIDE for simplicity, although I'll be migrating to NeoVim soon.
 5. Update the user part of your while block in main.c to have a simple binary counter using the 3 user LEDs:
@@ -142,10 +142,10 @@ Post header 2.3 information :
 ```
 This is essentially a header that is added onto the FSBL image. It allows the internal bootloader to authenticate the overall image, and actually allows the program to be accepted by the chip.
 10. The default configuration of the jumpers (out of the box) must now be changed. Specifically, Boot1 must now be set to high. This sets the board in `Develpment Boot Mode`, allowing us to flash our firmware.
-<img src="./2026-06-10-getting-started-with-stm32n6/default_config.jpg">
-![Correct Config for Programming](./2026-06-10-getting-started-with-stm32n6/correct_configuration.jpg)
+<img src="/assets/getting-started-with-nucleo-n6/default_config.jpg">
+![Correct Config for Programming](/assets/getting-started-with-nucleo-n6/correct_configuration.jpg)
 11. Open up CubeProgrammer, and then select the extended loader button and pick the appropraite one.
-![Extended Loader](./2026-06-10-getting-started-with-stm32n6/cubeprogrammer-selecting-el.png)
+![Extended Loader](/assets/getting-started-with-nucleo-n6/cubeprogrammer-selecting-el.png)
 12. Now just go to the download section, select the authenticated file, and then download it (after selecting verify).
-![Download Screen](./2026-06-10-getting-started-with-stm32n6/cubeprogrammer-programming.png)
+![Download Screen](/assets/getting-started-with-nucleo-n6/cubeprogrammer-programming.png)
 13. Now just go to the nucleo board, change Boot1 back to low, and then reset the board. Your program should be successfully running now!
