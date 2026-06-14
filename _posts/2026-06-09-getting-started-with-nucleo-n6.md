@@ -1,10 +1,19 @@
 # Getting Started with the Nucleo N6
 # Introduction
-The STM32N6 chip has been pretty hyped up over the past year or so, for it's [Neural-Art](https://www.st.com/resource/en/product_presentation/st-neural-art-accelerator-introduction.pdf) accelerator (and thus ability to put neural networks on it). 
+<div class="post-hero">
+    <div class="post-hero-text">
+        <p>The STM32N6 chip has been pretty hyped up over the past year or so, for it's <a href="https://www.st.com/resource/en/product_presentation/st-neural-art-accelerator-introduction.pdf">Neural-Art</a> accelerator (and thus ability to put neural networks on it).</p>
 
-I decided I wanted to try it out myself. While the standard demo is done with their [STM32N6 Discovery Kit](https://www.st.com/en/evaluation-tools/stm32n6570-dk.html), it was really expensive, especially for just fooling around. Luckily, the [NUCLEO-N6](https://www.st.com/en/evaluation-tools/nucleo-n657x0-q.html) provided a relatively low cost alternative.
+        <p>I decided I wanted to try it out myself. While the standard demo is done with their <a href="https://www.st.com/en/evaluation-tools/stm32n6570-dk.html">STM32N6 Discovery Kit</a>, it was really expensive, especially for just fooling around. Luckily, the <a href="https://www.st.com/en/evaluation-tools/nucleo-n657x0-q.html">NUCLEO-N6</a> provided a relatively low cost alternative.</p>
 
-After finally getting my hands on one (try Mouser or Evalta for yours), I opened it up, plugged it in, and that's where my problems started. To the best of my knowledge, there's no clear guide on using the Nucleo-N6 - most of the documentation is for the N6-DK, so I'm writing this in the hope that I'll be able to track my progress using this diabolical board.
+        <p>After finally getting my hands on one (try Mouser or Evalta for yours), I opened it up, plugged it in, and that's where my problems started. To the best of my knowledge, there's no clear guide on using the Nucleo-N6 - most of the documentation is for the N6-DK, so I'm writing this in the hope that I'll be able to track my progress using this diabolical board.</p>
+    </div>
+    <div class="post-hero-media">
+        <video class="post-hero-video" autoplay loop muted playsinline preload="metadata">
+            <source src="/assets/getting-started-with-nucleo-n6/working-binary-counter-video.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
 
 # Preliminary Errata
 Read this before going any further. The bringup of the firmware for this board is dependent on the software you use.

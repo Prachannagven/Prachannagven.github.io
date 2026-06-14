@@ -3,6 +3,47 @@ hr {
   margin-bottom: 20px;
 }
 
+.post-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.post-hero-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.post-hero-text p:first-child {
+  margin-top: 0;
+}
+
+.post-hero-media {
+  flex: 0 0 min(38%, 22rem);
+}
+
+.post-hero-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  background: #000;
+}
+
+@media (max-width: 760px) {
+  .post-hero {
+    flex-direction: column;
+  }
+
+  .post-hero-media {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
 /* Post navigation links */
 .post_navi {
   display: flex;
